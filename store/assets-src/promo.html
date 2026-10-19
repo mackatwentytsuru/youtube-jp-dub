@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+  :root {
+    --red: #c8202a;
+    --red-deep: #7d0f1a;
+    --ink: #101014;
+  }
+  * { margin: 0; box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Sans", sans-serif;
+    color: #fff;
+    overflow: hidden;
+  }
+  .slide {
+    width: 100vw; height: 100vh;
+    display: none;
+    position: relative;
+    background:
+      radial-gradient(1200px 700px at 85% -10%, rgba(200,32,42,0.5), transparent 60%),
+      radial-gradient(900px 600px at -10% 110%, rgba(200,32,42,0.28), transparent 55%),
+      linear-gradient(160deg, #17171c 0%, var(--ink) 60%, #0a0a0d 100%);
+  }
+  body[data-slide="hero"] .slide.hero,
+  body[data-slide="modes"] .slide.modes,
+  body[data-slide="small"] .slide.small,
+  body[data-slide="marquee"] .slide.marquee { display: block; }
+
+  .logo { display: flex; align-items: center; gap: 14px; }
+  .logo img { width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 6px 24px rgba(200,32,42,.45); }
+  .logo .name { font-size: 24px; font-weight: 800; letter-spacing: .02em; }
+
+  h1 { font-weight: 900; line-height: 1.25; letter-spacing: .01em; }
+  .accent { color: #ff5560; }
+
+  /* ---- player mockup ---- */
+  .player {
+    position: relative;
+    background: linear-gradient(135deg, #2a2e3a 0%, #171a22 70%);
+    border-radius: 14px;
+    box-shadow: 0 24px 70px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.07);
+    overflow: hidden;
+  }
+  .player .scene {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(400px 260px at 30% 40%, rgba(90,130,255,.25), transparent 60%),
+      radial-gradient(500px 300px at 75% 65%, rgba(255,120,60,.18), transparent 60%);
+  }
+  .player .speaker {
+    position: absolute; left: 8%; bottom: 24%;
+    width: 26%; aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #4a5164, #262b38 70%);
+    box-shadow: inset 0 -10px 30px rgba(0,0,0,.4);
+  }
+  .subtitle {
+    position: absolute; left: 50%; bottom: 13%; transform: translateX(-50%);
+    background: rgba(0,0,0,.82);
+    padding: .5em 1em;
+    border-radius: 8px;
+    font-size: 22px; font-weight: 700;
+    white-space: nowrap;
+  }
+  .controls {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 42px;
+    background: linear-gradient(transparent, rgba(0,0,0,.75));
+    display: flex; align-items: center; padding: 0 16px; gap: 14px;
+  }
+  .controls .bar { flex: 1; height: 4px; border-radius: 2px; background: rgba(255,255,255,.25); position: relative; }
+  .controls .bar::before { content:""; position:absolute; inset:0 62% 0 0; border-radius:2px; background: var(--red); }
+  .controls .dot { width: 12px; height: 12px; border-radius: 50%; background: #fff; }
+
+  .panel {
+    position: absolute; top: 16px; right: 16px;
+    background: rgba(20,20,24,.96);
+    border-radius: 10px;
+    box-shadow: 0 10px 34px rgba(0,0,0,.6);
+    font-size: 13px;
+    width: 218px;
+    overflow: hidden;
+  }
+  .panel .ph { display:flex; justify-content:space-between; align-items:center; padding: 9px 12px; border-bottom: 1px solid rgba(255,255,255,.12); font-weight: 700; }
+  .panel .pb { padding: 10px 12px; display:flex; flex-direction:column; gap:9px; color:#e8e8ea; }
+  .panel .prow { display:flex; justify-content:space-between; align-items:center; gap:8px; }
+  .panel .chk { width:13px; height:13px; border-radius:3px; background: var(--red); display:inline-block; position:relative; }
+  .panel .chk::after { content:"✓"; position:absolute; inset:0; color:#fff; font-size:10px; text-align:center; line-height:13px; }
+  .panel .slider { flex:1; height:4px; border-radius:2px; background:#3a3a42; position:relative; }
+  .panel .slider::before { content:""; position:absolute; inset:0 45% 0 0; background:var(--red); border-radius:2px; }
+  .panel .slider::after { content:""; position:absolute; top:-4px; left:52%; width:12px; height:12px; border-radius:50%; background:#fff; }
+  .panel .stat { font-size:11px; color:#9adf9a; }
+
+  .wave { display:flex; align-items:flex-end; gap:5px; height:46px; }
+  .wave i { width:7px; border-radius:3px; background: linear-gradient(180deg, #ff5560, var(--red)); }
+
+  /* ================= hero 1280x800 ================= */
+  .hero .wrap { display:flex; flex-direction:column; height:100%; padding: 54px 64px 48px; }
+  .hero .logo { margin-bottom: 30px; }
+  .hero h1 { font-size: 54px; margin-bottom: 16px; }
+  .hero .sub { font-size: 21px; color:#c9c9cf; margin-bottom: 34px; }
+  .hero .stage { flex:1; position:relative; }
+  .hero .player { position:absolute; right:0; top:0; width: 760px; height: 428px; }
+  .hero .feats { position:absolute; left:0; bottom:8px; display:flex; flex-direction:column; gap:14px; }
+  .feat { display:flex; align-items:center; gap:12px; font-size:19px; font-weight:600; }
+  .feat .b { width:34px; height:34px; border-radius:9px; background:linear-gradient(180deg,var(--red),var(--red-deep)); display:flex; align-items:center; justify-content:center; font-size:17px; box-shadow: 0 4px 14px rgba(200,32,42,.4); }
+
+  /* ================= modes 1280x800 ================= */
+  .modes .wrap { padding: 56px 64px; height:100%; display:flex; flex-direction:column; }
+  .modes h1 { font-size: 42px; margin-bottom: 40px; }
+  .modes .cards { display:flex; gap:28px; flex:1; }
+  .card {
+    flex:1; border-radius:16px; padding:30px 32px;
+    background: rgba(255,255,255,.055);
+    box-shadow: 0 0 0 1px rgba(255,255,255,.09), 0 18px 50px rgba(0,0,0,.35);
+    display:flex; flex-direction:column;
+  }
+  .card h2 { font-size:26px; margin-bottom:10px; }
+  .card .tag { display:inline-block; align-self:flex-start; font-size:13px; font-weight:700; padding:4px 12px; border-radius:99px; background:var(--red); margin-bottom:16px; }
+  .card p { font-size:17px; line-height:1.75; color:#d4d4da; }
+  .card .viz { margin-top:auto; padding-top:22px; }
+  .speedbars { display:flex; gap:10px; align-items:flex-end; height:88px; }
+  .speedbars i { flex:1; border-radius:6px 6px 0 0; background:linear-gradient(180deg,#ff5560,var(--red-deep)); }
+  .speedbars .lbl { position:absolute; }
+  .vizcap { font-size:12.5px; color:#9a9aa2; margin-top:10px; }
+
+  /* ================= small 440x280 ================= */
+  .small .wrap { height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; text-align:center; }
+  .small img { width:84px; height:84px; border-radius:20px; box-shadow: 0 10px 34px rgba(200,32,42,.5); }
+  .small h1 { font-size:25px; }
+  .small .sub { font-size:14px; color:#c9c9cf; }
+
+  /* ================= marquee 1400x560 ================= */
+  .marquee .wrap { height:100%; display:flex; align-items:center; padding: 0 70px; gap: 56px; }
+  .marquee .left { flex: 1.05; }
+  .marquee .logo { margin-bottom: 26px; }
+  .marquee h1 { font-size: 46px; margin-bottom: 18px; }
+  .marquee .sub { font-size: 19px; color:#c9c9cf; line-height:1.7; }
+  .marquee .player { width: 600px; height: 338px; flex:none; }
+</style>
+</head>
+<body data-slide="hero">
+
+<!-- ============ 1280x800 ヒーロー ============ -->
+<div class="slide hero">
+  <div class="wrap">
+    <div class="logo"><img src="../../assets/icon.svg" alt=""><span class="name">YouTube JP Dub</span></div>
+    <h1>英語のYouTubeを、<span class="accent">日本語で聴く。</span></h1>
+    <div class="sub">字幕の尺に合わせて速度を自動調整する、追従型リアルタイム吹き替え</div>
+    <div class="stage">
+      <div class="player">
+        <div class="scene"></div><div class="speaker"></div>
+        <div class="subtitle">つまり、これが新しいアプローチの核心なんです</div>
+        <div class="panel">
+          <div class="ph"><span>🎙 JP Dub</span><span style="color:#9a9aa2">▼</span></div>
+          <div class="pb">
+            <div class="prow"><span><span class="chk"></span> 吹き替えを有効化</span></div>
+            <div class="prow"><span>基準速度 <b style="color:#ff8a93">1.2</b></span><span class="slider"></span></div>
+            <div class="prow"><span><span class="chk"></span> 速度を自動調整</span></div>
+            <div class="stat">吹き替え中(YouTube翻訳字幕: en→日本語)</div>
+          </div>
+        </div>
+        <div class="controls"><div class="dot"></div><div class="bar"></div></div>
+      </div>
+      <div class="feats">
+        <div class="feat"><span class="b">⏱</span>尺ぴったり自動変速で置いていかれない</div>
+        <div class="feat"><span class="b">🔊</span>Edge Natural音声対応の高品質読み上げ</div>
+        <div class="feat"><span class="b">🆓</span>AI課金なし・登録不要・完全無料</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 1280x800 方式比較 ============ -->
+<div class="slide modes">
+  <div class="wrap">
+    <h1>2つの再生方式 × <span class="accent">尺合わせ自動変速</span></h1>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">同時通訳スタイル</span>
+        <h2>ダッキング方式</h2>
+        <p>動画はそのまま再生。読み上げ中だけ元音声の音量を自動で下げ、同時通訳のように重ねて聴けます。長い字幕は自動で速く、短い字幕はゆっくり——遅れても追いついて同期を保ちます。</p>
+        <div class="viz">
+          <div class="speedbars"><i style="height:38%"></i><i style="height:52%"></i><i style="height:88%"></i><i style="height:64%"></i><i style="height:42%"></i><i style="height:74%"></i><i style="height:50%"></i></div>
+          <div class="vizcap">字幕ごとの読み上げ速度(自動調整のイメージ)</div>
+        </div>
+      </div>
+      <div class="card">
+        <span class="tag">じっくり学習スタイル</span>
+        <h2>自動ポーズ方式</h2>
+        <p>字幕が出るたびに動画を一時停止して1文ずつ読み上げ。聞き終わると自動で再生を再開します。内容を確実に追いたい講義・チュートリアル動画に最適です。</p>
+        <div class="viz">
+          <div class="wave"><i style="height:30%"></i><i style="height:65%"></i><i style="height:100%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:40%"></i><i style="height:70%"></i><i style="height:35%"></i></div>
+          <div class="vizcap">▶ 再生 → ⏸ 読み上げ → ▶ 再生 を自動で繰り返し</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 440x280 小プロモタイル ============ -->
+<div class="slide small">
+  <div class="wrap">
+    <img src="../../assets/icon.svg" alt="">
+    <h1>YouTube JP Dub</h1>
+    <div class="sub">英語動画を、その場で日本語吹き替え</div>
+  </div>
+</div>
+
+<!-- ============ 1400x560 マーキー ============ -->
+<div class="slide marquee">
+  <div class="wrap">
+    <div class="left">
+      <div class="logo"><img src="../../assets/icon.svg" alt=""><span class="name">YouTube JP Dub</span></div>
+      <h1>英語のYouTubeを、<br><span class="accent">日本語で聴く。</span></h1>
+      <div class="sub">字幕の尺に合わせて自動変速する追従型吹き替え。<br>AI課金なし・登録不要・完全無料。</div>
+    </div>
+    <div class="player">
+      <div class="scene"></div><div class="speaker"></div>
+      <div class="subtitle" style="font-size:18px">つまり、これが核心なんです</div>
+      <div class="controls"><div class="dot"></div><div class="bar"></div></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

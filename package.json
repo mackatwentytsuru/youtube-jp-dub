@@ -1,0 +1,23 @@
+{
+  "name": "youtube-jp-dub",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Chrome / Edge extension that dubs English YouTube videos into Japanese with text-to-speech",
+  "license": "MIT",
+  "author": "Yuki Tsuruoka",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mackatwentytsuru/youtube-jp-dub.git"
+  },
+  "homepage": "https://github.com/mackatwentytsuru/youtube-jp-dub#readme",
+  "bugs": {
+    "url": "https://github.com/mackatwentytsuru/youtube-jp-dub/issues"
+  },
+  "scripts": {
+    "test": "node test/run-all.js",
+    "test:e2e": "node test/e2e-simulated.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}

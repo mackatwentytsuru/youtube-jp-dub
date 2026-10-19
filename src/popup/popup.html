@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>YouTube JP Dub</title>
+    <link rel="stylesheet" href="../../styles/ui.css" />
+  </head>
+  <body class="yjd-popup">
+    <h1><img src="../../icons/icon-32.png" width="22" height="22" alt="" />YouTube JP Dub</h1>
+
+    <label class="row check">
+      <input type="checkbox" id="enabled" />
+      <span>吹き替えを有効化</span>
+    </label>
+
+    <div class="row">
+      <label for="mode">再生方式</label>
+      <select id="mode">
+        <option value="ducking">ダッキング（重ねて再生）</option>
+        <option value="pause">自動ポーズ（止めて読む）</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label for="rate">基準速度 <b id="rateVal">1.1</b></label>
+      <input type="range" id="rate" min="0.5" max="2" step="0.1" />
+    </div>
+
+    <label class="row check">
+      <input type="checkbox" id="autoRate" />
+      <span>速度を自動調整（ダッキング）</span>
+    </label>
+
+    <div class="row">
+      <label for="voice">声</label>
+      <select id="voice"></select>
+    </div>
+
+    <label class="row check">
+      <input type="checkbox" id="subs" />
+      <span>日本語字幕を表示</span>
+    </label>
+
+    <label class="row check">
+      <input type="checkbox" id="showPanel" />
+      <span>動画プレイヤー上にパネルを表示</span>
+    </label>
+
+    <p class="hint" id="hint"></p>
+    <p class="note">パネルは動画のコントロールと一緒に自動で隠れます。</p>
+    <button id="openOptions" class="link-btn">詳細設定を開く</button>
+
+    <script src="../lib/storage.js"></script>
+    <script src="../lib/voices.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

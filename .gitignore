@@ -1,0 +1,21 @@
+# Node
+node_modules/
+npm-debug.log*
+.npm
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Playwright / test artefacts
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Build / packaging
+dist/
+*.zip
+*.crx
