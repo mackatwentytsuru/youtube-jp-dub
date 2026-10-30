@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>YouTube JP Dub — 詳細設定</title>
+    <link rel="stylesheet" href="../../styles/ui.css" />
+  </head>
+  <body class="yjd-options">
+    <h1><img src="../../icons/icon-32.png" width="24" height="24" alt="" />YouTube JP Dub — 詳細設定</h1>
+
+    <section>
+      <h2>音声・字幕</h2>
+      <div class="row">
+        <label for="duck">ダッキング時の元音声の音量 <b id="duckVal">25%</b></label>
+        <input type="range" id="duck" min="0" max="100" step="5" />
+      </div>
+      <p class="desc">ダッキング方式で日本語を読み上げている間、動画の元音声をこの音量まで下げます。</p>
+
+      <div class="row">
+        <label for="font">字幕フォントサイズ <b id="fontVal">24px</b></label>
+        <input type="range" id="font" min="12" max="40" step="1" />
+      </div>
+    </section>
+
+    <section>
+      <h2>速度の自動調整</h2>
+      <label class="row check">
+        <input type="checkbox" id="autoRate" />
+        <span>字幕の長さに応じて読み上げ速度を自動調整する</span>
+      </label>
+      <p class="desc">
+        ダッキング方式のとき、字幕が長い場面では読み上げ速度を自動で速め、
+        元のセリフの尺に収まるようにします（最大約5倍速）。短い場面では
+        「速度」スライダーの値のまま読み上げます。自動ポーズ方式では無効です。
+      </p>
+      <p class="desc">
+        ※ Google 日本語などのクラウド音声は仕様上2.0倍速までに制限されます。
+        高速化にはお使いのOSのローカル音声（Microsoft 日本語音声など）を推奨します。
+        速度を上げすぎると聞き取りづらくなる点にご注意ください。
+      </p>
+    </section>
+
+    <section>
+      <h2>翻訳方式</h2>
+      <div class="engine-box ok">
+        YouTube の字幕翻訳機能を使用します。英語など他言語の字幕がある動画なら、
+        YouTube 側で日本語に翻訳された字幕をそのまま読み上げます。
+      </div>
+      <p class="desc">
+        APIキーや外部サービスは不要です。字幕が1つも付いていない動画は吹き替えできません。
+      </p>
+    </section>
+
+    <script src="../lib/storage.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

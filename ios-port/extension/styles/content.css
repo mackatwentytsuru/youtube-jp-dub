@@ -1,0 +1,169 @@
+/* content.css — YouTube ページ上のオーバーレイ字幕とコントロールパネル */
+
+/* 読み取り用に表示させた YouTube 純正字幕を隠す（拡張が代わりに表示する）。
+   visibility ではなく opacity を使う: 字幕の描画自体は継続させ DOM から読めるようにする。 */
+html.yjd-hide-yt-captions .ytp-caption-window-container {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* ===== 日本語字幕オーバーレイ ===== */
+#yjd-subtitle {
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+  transform: translateX(-50%);
+  max-width: 82%;
+  box-sizing: border-box;
+  padding: 6px 14px;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.45;
+  text-align: center;
+  border-radius: 6px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  white-space: pre-wrap;
+  pointer-events: none;
+  z-index: 30;
+  display: none;
+  transition: transform 0.2s ease;
+}
+
+/* コントロールバー非表示時は純正字幕と同様に下へ寄せる */
+.html5-video-player.ytp-autohide #yjd-subtitle {
+  transform: translateX(-50%) translateY(42px);
+}
+
+/* ===== コントロールパネル ===== */
+#yjd-panel {
+  position: absolute;
+  top: 56px;
+  right: 12px;
+  width: 232px;
+  box-sizing: border-box;
+  background: rgba(20, 20, 22, 0.94);
+  color: #f1f1f1;
+  font-family: "Roboto", "Yu Gothic UI", sans-serif;
+  font-size: 13px;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
+  z-index: 9999;
+  user-select: none;
+  opacity: 0.95;
+  transition: opacity 0.25s ease;
+}
+
+#yjd-panel:hover {
+  opacity: 1;
+}
+
+/* YouTubeのコントロールが自動非表示になったらパネルも一緒に消す */
+.html5-video-player.ytp-autohide #yjd-panel {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* 折りたたみ時は小さなチップ状にする */
+#yjd-panel.yjd-collapsed {
+  width: auto;
+}
+
+#yjd-panel.yjd-collapsed .yjd-panel-header {
+  border-bottom: none;
+}
+
+#yjd-panel .yjd-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#yjd-panel .yjd-panel-title {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+#yjd-panel .yjd-panel-collapse {
+  background: transparent;
+  border: none;
+  color: #f1f1f1;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+#yjd-panel .yjd-panel-collapse:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+#yjd-panel .yjd-panel-body {
+  padding: 8px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#yjd-panel.yjd-collapsed .yjd-panel-body {
+  display: none;
+}
+
+#yjd-panel .yjd-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+#yjd-panel .yjd-row > span:first-child {
+  flex: 0 0 auto;
+}
+
+#yjd-panel select,
+#yjd-panel input[type="range"] {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+#yjd-panel select {
+  background: #2a2a2e;
+  color: #f1f1f1;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+  padding: 3px 4px;
+  font-size: 12px;
+}
+
+#yjd-panel input[type="checkbox"] {
+  margin: 0 6px 0 0;
+  accent-color: #c82020;
+}
+
+#yjd-panel label.yjd-row {
+  cursor: pointer;
+}
+
+#yjd-panel .yjd-rate-val {
+  color: #ff9a9a;
+}
+
+#yjd-panel .yjd-status {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #b5b5b5;
+  min-height: 14px;
+}
+
+#yjd-panel .yjd-status.yjd-status-warn {
+  color: #ffcf66;
+}
+
+#yjd-panel .yjd-status.yjd-status-error {
+  color: #ff8a8a;
+}

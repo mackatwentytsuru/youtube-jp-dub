@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D3C3BC9B30266CC30023F2E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C3BC9A30266CC30023F2E9 /* AppDelegate.swift */; };
+		D3C3BC9F30266CC30023F2E9 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = D3C3BC9D30266CC30023F2E9 /* Main.html */; };
+		D3C3BCA130266CC30023F2E9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D3C3BCA030266CC30023F2E9 /* Icon.png */; };
+		D3C3BCA330266CC30023F2E9 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = D3C3BCA230266CC30023F2E9 /* Style.css */; };
+		D3C3BCA530266CC30023F2E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C3BCA430266CC30023F2E9 /* SceneDelegate.swift */; };
+		D3C3BCA730266CC30023F2E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C3BCA630266CC30023F2E9 /* ViewController.swift */; };
+		D3C3BCAA30266CC30023F2E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C3BCA830266CC30023F2E9 /* LaunchScreen.storyboard */; };
+		D3C3BCAD30266CC30023F2E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C3BCAB30266CC30023F2E9 /* Main.storyboard */; };
+		D3C3BCB530266CC40023F2E9 /* YouTube JP Dub Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D3C3BCB430266CC40023F2E9 /* YouTube JP Dub Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D3C3BCBA30266CC40023F2E9 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C3BCB930266CC40023F2E9 /* SafariWebExtensionHandler.swift */; };
+		D3C3BCBC30266CC40023F2E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C3BCAE30266CC40023F2E9 /* Assets.xcassets */; };
+		D3C3BCCB30266CC40023F2E9 /* styles in Resources */ = {isa = PBXBuildFile; fileRef = D3C3BCC730266CC40023F2E9 /* styles */; };
+		D3C3BCCC30266CC40023F2E9 /* icons in Resources */ = {isa = PBXBuildFile; fileRef = D3C3BCC830266CC40023F2E9 /* icons */; };
+		D3C3BCCD30266CC40023F2E9 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = D3C3BCC930266CC40023F2E9 /* manifest.json */; };
+		D3C3BCCE30266CC40023F2E9 /* src in Resources */ = {isa = PBXBuildFile; fileRef = D3C3BCCA30266CC40023F2E9 /* src */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3C3BCB630266CC40023F2E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3C3BC8F30266CC30023F2E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3C3BCB330266CC40023F2E9;
+			remoteInfo = "YouTube JP Dub Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D3C3BCC230266CC40023F2E9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D3C3BCB530266CC40023F2E9 /* YouTube JP Dub Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D3C3BC9730266CC30023F2E9 /* YouTube JP Dub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YouTube JP Dub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3C3BC9A30266CC30023F2E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3C3BC9E30266CC30023F2E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		D3C3BCA030266CC30023F2E9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		D3C3BCA230266CC30023F2E9 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		D3C3BCA430266CC30023F2E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D3C3BCA630266CC30023F2E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D3C3BCA930266CC30023F2E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D3C3BCAC30266CC30023F2E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D3C3BCAE30266CC40023F2E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D3C3BCAF30266CC40023F2E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3C3BCB430266CC40023F2E9 /* YouTube JP Dub Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "YouTube JP Dub Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3C3BCB930266CC40023F2E9 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		D3C3BCBB30266CC40023F2E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3C3BCC730266CC40023F2E9 /* styles */ = {isa = PBXFileReference; lastKnownFileType = folder; name = styles; path = Resources/styles; sourceTree = "<group>"; };
+		D3C3BCC830266CC40023F2E9 /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = Resources/icons; sourceTree = "<group>"; };
+		D3C3BCC930266CC40023F2E9 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		D3C3BCCA30266CC40023F2E9 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; name = src; path = Resources/src; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3C3BC9430266CC30023F2E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3C3BCB130266CC40023F2E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D3C3BC8E30266CC30023F2E9 = {
+			isa = PBXGroup;
+			children = (
+				D3C3BC9930266CC30023F2E9 /* YouTube JP Dub */,
+				D3C3BCB830266CC40023F2E9 /* YouTube JP Dub Extension */,
+				D3C3BC9830266CC30023F2E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D3C3BC9830266CC30023F2E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3C3BC9730266CC30023F2E9 /* YouTube JP Dub.app */,
+				D3C3BCB430266CC40023F2E9 /* YouTube JP Dub Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3C3BC9930266CC30023F2E9 /* YouTube JP Dub */ = {
+			isa = PBXGroup;
+			children = (
+				D3C3BC9A30266CC30023F2E9 /* AppDelegate.swift */,
+				D3C3BCA430266CC30023F2E9 /* SceneDelegate.swift */,
+				D3C3BCA630266CC30023F2E9 /* ViewController.swift */,
+				D3C3BCA830266CC30023F2E9 /* LaunchScreen.storyboard */,
+				D3C3BCAB30266CC30023F2E9 /* Main.storyboard */,
+				D3C3BCAE30266CC40023F2E9 /* Assets.xcassets */,
+				D3C3BCAF30266CC40023F2E9 /* Info.plist */,
+				D3C3BC9C30266CC30023F2E9 /* Resources */,
+			);
+			path = "YouTube JP Dub";
+			sourceTree = "<group>";
+		};
+		D3C3BC9C30266CC30023F2E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3C3BC9D30266CC30023F2E9 /* Main.html */,
+				D3C3BCA030266CC30023F2E9 /* Icon.png */,
+				D3C3BCA230266CC30023F2E9 /* Style.css */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D3C3BCB830266CC40023F2E9 /* YouTube JP Dub Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D3C3BCC630266CC40023F2E9 /* Resources */,
+				D3C3BCB930266CC40023F2E9 /* SafariWebExtensionHandler.swift */,
+				D3C3BCBB30266CC40023F2E9 /* Info.plist */,
+			);
+			path = "YouTube JP Dub Extension";
+			sourceTree = "<group>";
+		};
+		D3C3BCC630266CC40023F2E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3C3BCC730266CC40023F2E9 /* styles */,
+				D3C3BCC830266CC40023F2E9 /* icons */,
+				D3C3BCC930266CC40023F2E9 /* manifest.json */,
+				D3C3BCCA30266CC40023F2E9 /* src */,
+			);
+			name = Resources;
+			path = "YouTube JP Dub Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3C3BC9630266CC30023F2E9 /* YouTube JP Dub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3C3BCC330266CC40023F2E9 /* Build configuration list for PBXNativeTarget "YouTube JP Dub" */;
+			buildPhases = (
+				D3C3BC9330266CC30023F2E9 /* Sources */,
+				D3C3BC9430266CC30023F2E9 /* Frameworks */,
+				D3C3BC9530266CC30023F2E9 /* Resources */,
+				D3C3BCC230266CC40023F2E9 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3C3BCB730266CC40023F2E9 /* PBXTargetDependency */,
+			);
+			name = "YouTube JP Dub";
+			packageProductDependencies = (
+			);
+			productName = "YouTube JP Dub";
+			productReference = D3C3BC9730266CC30023F2E9 /* YouTube JP Dub.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3C3BCB330266CC40023F2E9 /* YouTube JP Dub Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3C3BCBF30266CC40023F2E9 /* Build configuration list for PBXNativeTarget "YouTube JP Dub Extension" */;
+			buildPhases = (
+				D3C3BCB030266CC40023F2E9 /* Sources */,
+				D3C3BCB130266CC40023F2E9 /* Frameworks */,
+				D3C3BCB230266CC40023F2E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "YouTube JP Dub Extension";
+			packageProductDependencies = (
+			);
+			productName = "YouTube JP Dub Extension";
+			productReference = D3C3BCB430266CC40023F2E9 /* YouTube JP Dub Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3C3BC8F30266CC30023F2E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					D3C3BC9630266CC30023F2E9 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					D3C3BCB330266CC40023F2E9 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = D3C3BC9230266CC30023F2E9 /* Build configuration list for PBXProject "YouTube JP Dub" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3C3BC8E30266CC30023F2E9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D3C3BC9830266CC30023F2E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3C3BC9630266CC30023F2E9 /* YouTube JP Dub */,
+				D3C3BCB330266CC40023F2E9 /* YouTube JP Dub Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3C3BC9530266CC30023F2E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3C3BCA130266CC30023F2E9 /* Icon.png in Resources */,
+				D3C3BCAD30266CC30023F2E9 /* Main.storyboard in Resources */,
+				D3C3BCAA30266CC30023F2E9 /* LaunchScreen.storyboard in Resources */,
+				D3C3BC9F30266CC30023F2E9 /* Main.html in Resources */,
+				D3C3BCBC30266CC40023F2E9 /* Assets.xcassets in Resources */,
+				D3C3BCA330266CC30023F2E9 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3C3BCB230266CC40023F2E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3C3BCCB30266CC40023F2E9 /* styles in Resources */,
+				D3C3BCCD30266CC40023F2E9 /* manifest.json in Resources */,
+				D3C3BCCC30266CC40023F2E9 /* icons in Resources */,
+				D3C3BCCE30266CC40023F2E9 /* src in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3C3BC9330266CC30023F2E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3C3BCA730266CC30023F2E9 /* ViewController.swift in Sources */,
+				D3C3BC9B30266CC30023F2E9 /* AppDelegate.swift in Sources */,
+				D3C3BCA530266CC30023F2E9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3C3BCB030266CC40023F2E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3C3BCBA30266CC40023F2E9 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3C3BCB730266CC40023F2E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3C3BCB330266CC40023F2E9 /* YouTube JP Dub Extension */;
+			targetProxy = D3C3BCB630266CC40023F2E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D3C3BC9D30266CC30023F2E9 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3C3BC9E30266CC30023F2E9 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		D3C3BCA830266CC30023F2E9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3C3BCA930266CC30023F2E9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D3C3BCAB30266CC30023F2E9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3C3BCAC30266CC30023F2E9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3C3BCBD30266CC40023F2E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D3C3BCBE30266CC40023F2E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3C3BCC030266CC40023F2E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "YouTube JP Dub Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "YouTube JP Dub Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yukitsuruoka.yjdub.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3C3BCC130266CC40023F2E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "YouTube JP Dub Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "YouTube JP Dub Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yukitsuruoka.yjdub.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D3C3BCC430266CC40023F2E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "YouTube JP Dub/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "YouTube JP Dub";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yukitsuruoka.yjdub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3C3BCC530266CC40023F2E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "YouTube JP Dub/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "YouTube JP Dub";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yukitsuruoka.yjdub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3C3BC9230266CC30023F2E9 /* Build configuration list for PBXProject "YouTube JP Dub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3C3BCBD30266CC40023F2E9 /* Debug */,
+				D3C3BCBE30266CC40023F2E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3C3BCBF30266CC40023F2E9 /* Build configuration list for PBXNativeTarget "YouTube JP Dub Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3C3BCC030266CC40023F2E9 /* Debug */,
+				D3C3BCC130266CC40023F2E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3C3BCC330266CC40023F2E9 /* Build configuration list for PBXNativeTarget "YouTube JP Dub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3C3BCC430266CC40023F2E9 /* Debug */,
+				D3C3BCC530266CC40023F2E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D3C3BC8F30266CC30023F2E9 /* Project object */;
+}
